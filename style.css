@@ -24,13 +24,56 @@ body, html {
     
     /* Set the body to display Flexbox with column direction */
     body {
+        font-family: 'Arial', sans-serif; /* You can change the font family as needed */
         display: flex;
         flex-direction: column;
         justify-content: space-between; /* Pushes header to the top and footer to the bottom */
         height: 100vh; /* Full viewport height */
         margin: 0; /* Remove default margin */
+        color: white; /* Sets the default text color to white for the entire body */
+        text-align: center; /* Centers all text in the body */
     }
     
+    .intro {
+        padding: 20px;
+        margin: 20px auto;  /* Centers the content and adds space around it*/
+        max-width: 800px;  /*Ensures content is not too wide on larger screens*/
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Adds subtle depth*/
+        border-radius: 10px;  /*Softens the edges*/
+    }
+    
+    .project-info, .developer-info {
+        color: #ffffff;  /* Dark text color for readability on light background */
+        margin: -50px auto;  /* Centers the sections and adds vertical space between them */
+        padding: 10px;  /* Adds padding inside the sections */
+        max-width: 800px;  /* Restricts the maximum width for better readability */
+        border-radius: 10px;  /* Optional: Adds rounded corners */
+    }
+
+    /* If sections still feel too broad, increase padding */
+    .project-info, .developer-info {
+        padding: 40px;  /* Increase padding to reduce the text block width */
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px auto; /* Increase margin and center the button */
+        margin-top: 20px;
+        background-color: white; /* White background for the button */
+        color: black; /* Black text color for the button */
+        text-decoration: none; /* Removes underline from the link */
+        border-radius: 50%; /* Makes the button circular */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+        text-align: center;
+        font-family: 'Tangerine', cursive; /* Using Tangerine Script */
+        font-style: italic; /* Makes the text italic */
+        font-size: 35px; /* Font size of the quote */
+        position: relative; /* Ensure it's positioned relative */
+        z-index: 10; /* Raise the z-index to ensure it's above other elements */
+    
+    }
+
     .main-content {
     flex-grow: 1; /* Takes up all available space between header and footer */
     }
@@ -62,7 +105,7 @@ body, html {
         align-items: center;
         color: #fff; /* Text color */
         text-align: center;
-         font-family: 'Tangerine', cursive; /* Using Tangerine Script */
+        font-family: 'Tangerine', cursive; /* Using Tangerine Script */
         font-style: italic; /* Makes the text italic */
     }
 
@@ -98,4 +141,4 @@ body, html {
     footer .p{
         font-size: 20PX;
         text-align: bottom;
-    }
+    } 
