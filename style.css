@@ -1,0 +1,101 @@
+body, html {
+        height: 100%;
+        margin: 0;
+    }
+    @font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+    }
+
+    .bg {
+        /* Full height */
+        height: 100%; 
+
+        /* Center and scale the image nicely */
+        position: relative; /* Parent relative positioning */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-grow: 1;
+
+        /* Set the path to your image */
+        background-image: url('images/QUOTABLE.png');
+    }
+    
+    /* Set the body to display Flexbox with column direction */
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Pushes header to the top and footer to the bottom */
+        height: 100vh; /* Full viewport height */
+        margin: 0; /* Remove default margin */
+    }
+    
+    .main-content {
+    flex-grow: 1; /* Takes up all available space between header and footer */
+    }
+
+    /* Header styling */
+    .header {
+        font-size: 48px; /* Large font size for visibility */
+        color: white; /* White text color for contrast */
+        text-align: center; /* Center-align the text */
+        margin: 20px 0; /* Margin for spacing */
+        font-family: 'Montserrat', sans-serif; /* Using Montserrat */
+        font-weight: 700; /* Bold font weight */
+    }
+
+    /* Footer styling */
+    .footer {
+        font-size: 20px; /* Smaller font size for footer */
+        color: #000; /* White text color */
+        text-align: center; /* Center the text horizontally */
+        margin: 10px 0; /* Space above and below footer */
+        position:relative;
+    }
+    .circle {
+        position: absolute;
+        background-color: #775e44; /* Adjust the color to match your design */
+        border-radius: 50%; /* Makes the div circular */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff; /* Text color */
+        text-align: center;
+         font-family: 'Tangerine', cursive; /* Using Tangerine Script */
+        font-style: italic; /* Makes the text italic */
+    }
+
+    .large-circle {
+        width: 350px; /* Size of the large circle */
+        height: 350px;
+        top: 50%;
+        left: 50%;
+        margin-top: -200px; /* Offset by half of height */
+        margin-left: -200px; /* Offset by half of width */
+        font-size: 35px; /* Font size of the quote */
+        padding: 20px; /* Padding for text inside the circle */
+        z-index: 2; /* Ensures it's above the background */
+    }
+
+    .small-circle {
+        width: 200px; /* Size of the small circle */
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        margin-top: 30px; /* Offset by half of height plus some adjustment to overlap */
+        margin-left: 80px; /* Adjust for overlap */
+         cursor: pointer; /* Indicates it's clickable */
+        font-size: 27px; /* Font size for 'New Quote' */
+        z-index: 3; /* Ensures it's above the large circle */
+    }
+
+    #quote-display {
+        opacity: 1; /* Start fully visible */
+        transition: opacity 0.5s ease-in-out; /* Smooth transition for the opacity */
+    }
+
+    footer .p{
+        font-size: 20PX;
+        text-align: bottom;
+    }
